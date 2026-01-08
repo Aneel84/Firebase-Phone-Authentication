@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Firebase Phone Authentication</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="number-card glass-card">
+        <h3 class="text-center">Phone Login</h3>
+        <p class="text-muted text-center small">
+          Enter your number with country code
+        </p>
+        <input
+          type="text"
+          id="phone"
+          class="form-control"
+          placeholder="+92 300 1234567"
+        />
+        <button id="sign-in-button" class="btn btn-primary w-100 mb-3">
+          Send OTP Code
+        </button>
 
-  <!-- SweetAlert -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <input
+          type="text"
+          id="otp"
+          class="form-control"
+          placeholder="6-digit OTP code"
+        />
+        <button id="verifyBtn" class="btn btn-success w-100">
+          Verify & Login
+        </button>
 
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <div class="number-card glass-card">
-    <h3 class="text-center">Phone Login</h3>
-    <p class="text-muted text-center small">
-      Enter your number with country code
-    </p>
-
-    <input
-      type="text"
-      id="phone"
-      class="form-control"
-      placeholder="+92 300 1234567"
-    />
-
-    <!-- reCAPTCHA container -->
-    <div id="recaptcha-container"></div>
-
-    <button id="sign-in-button" class="btn btn-primary w-100 mb-3">
-      Send OTP Code
-    </button>
-
-    <input
-      type="text"
-      id="otp"
-      class="form-control"
-      placeholder="6-digit OTP code"
-    />
-
-    <button id="verifyBtn" class="btn btn-success w-100">
-      Verify & Login
-    </button>
-
-    <button class="btn btn-link w-100 text-danger" id="logout">
-      Sign Out
-    </button>
-  </div>
-
-  <script type="module" src="app.js"></script>
-</body>
+        <p class="text-center mt-4 mb-0">
+          Back to
+          <span class="footer-link" id="signup-email">Email Signup</span>
+        </p>
+        <button class="btn btn-link w-100 text-danger" id="logout">
+          Sign Out
+        </button>
+      </div>
+    </div>
+  
+    <script type="module" src="app.js"></script>
+  </body>
 </html>
